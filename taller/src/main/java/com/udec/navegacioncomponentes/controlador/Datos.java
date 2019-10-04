@@ -70,7 +70,7 @@ public class Datos implements Serializable {
          if(ubicacion.equals("Afueras")){
              tubicacion=80000;
          }
-             total=tprofecion+tidiomas+tubicacion; 
+              
     }
     
     public Datos() {
@@ -189,6 +189,10 @@ public class Datos implements Serializable {
         this.tdias = tdias;
     }
     
+    public long total(){
+        total=tprofecion+tidiomas+tubicacion;
+        return total;
+    }
     
  public String apodo() {
      String gen = principal.getGenero();;
@@ -214,7 +218,7 @@ public class Datos implements Serializable {
              case "tecnico":
                  tprofecion=dias*100000;
              break;
-             case "auxiliar":
+             default:
                  tprofecion=dias*50000;
              break;
                  
