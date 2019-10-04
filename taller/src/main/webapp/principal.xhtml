@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+       
+            <h:outputText value="Nombre: " />
+            <h:inputText id="txtNombre" label="Ingrese el Nombre"  required="true" value="#{principal.nombre}" /> 
+            <br></br><br></br>
+             <h:outputText value="apellido: " />
+             <h:inputText id="txtApellido" label="Ingrese el apellido"  required="true" value="#{principal.apellido}" />
+            <br></br><br></br>
+            <h:selectOneMenu value="#{principal.profe}" >
+                <f:selectItem itemValue="ingeniero" itemLabel="ingeniero" />
+                <f:selectItem itemValue="tecnologo" itemLabel="tecnologo" />
+                <f:selectItem itemValue="tecnico" itemLabel="tecnico" />
+                <f:selectItem itemValue="auxiliar" itemLabel="auxiliar" />                
+            </h:selectOneMenu>  
+            <br></br><br></br>
+            <h:outputText value="Genero" />
+              <h:selectOneRadio id="txtGenero" label="Seleccione un genero"  required="true"  value="#{principal.genero}" >
+                <f:selectItem itemValue="Hombre" itemLabel="Hombre" />
+                <f:selectItem itemValue="Mujer" itemLabel="Mujer" />
+            </h:selectOneRadio>
+    
+            <h:outputText value="Idiomas" />
+            <h:selectManyCheckbox value="#{principal.idioma}" >
+           
+                <f:selectItem itemValue="Ingles" itemLabel="Ingles" />
+                <f:selectItem itemValue="Frances" itemLabel="Frances" />
+                <f:selectItem itemValue="Aleman" itemLabel="Aleman" />
+            </h:selectManyCheckbox>
+            <br></br><br></br>
+             
+            <h:outputText value="Dias Trabajados " />
+            <h:inputText id="txtDias" label="Ingrese dias"  required="true" value="#{principal.dias}" />
+            <br></br><br></br>
+            <h:selectOneRadio id="txtLugar" label="Selecione un lugar"  required="true" value="#{principal.ubicacion}" >
+                <f:selectItem itemValue="Facatativa" itemLabel="Facatativa" />
+                <f:selectItem itemValue="Afueras" itemLabel="Afueras" />
+            </h:selectOneRadio>
+           
+            <br></br><br></br>
+            
+      
+           
+            <h:commandButton  value="Calcular"  action="#{principal.irDatos}"  />
+            <br></br><br></br>
+            
+            
+        </h:form>
+    </h:body>
+</html>
+

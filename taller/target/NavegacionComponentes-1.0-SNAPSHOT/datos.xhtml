@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Datos</title>
+    </h:head>
+    <h:body>
+       <h2>Datos recibidos y procesados</h2>
+        <h:panelGrid columns="2">
+            
+            <h:outputLabel  value="Nombre Completo  :   #{datos.sen } "/>
+            
+            
+            <h:outputLabel value="   #{datos.nombre} #{datos.apellido}"/>
+
+            <h:outputLabel  value="Profesion : "/>
+            <h:outputLabel  value="#{datos.profe}"/> 
+            
+            <h:outputLabel  value="por su Profesion : "/>
+            <h:outputLabel  value="#{datos.profecion()}"/> 
+            
+            <h:outputLabel value="Ubicacion : "/>
+            <h:outputLabel  value="#{datos.ubicacion}"/> 
+            
+            <h:outputLabel value="por su Ubicacion : "/>
+            <h:outputLabel  value="#{datos.tubicacion}"/> 
+
+            <h:outputLabel value="idiomas: "/>
+            <h:dataTable value="#{datos.idioma}" var="item">
+                <h:column>
+                    <h:outputLabel value="#{item}"/>
+                </h:column>
+            </h:dataTable>
+            <h:outputLabel value="por su Idioma : "/>
+            <h:outputLabel  value="#{datos.idiomas()}"/> 
+
+            <h:outputLabel value="su cuenta es por : "/>
+            <h:outputLabel  value="#{datos.total}"/> 
+
+
+        </h:panelGrid> 
+            
+    </h:body>
+</html>
+
